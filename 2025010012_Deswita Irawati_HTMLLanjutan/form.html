@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Latihan HTML Lanjutan - Form</title>
+</head>
+<body>
+    <h1>Latihan Form dan Input HTML</h1>
+    <hr>
+
+    <h2>Form Pendaftaran Mahasiswa Baru</h2>
+    <form action="" method="post">
+        
+        <!-- Input Text, Email, Password (Praktik 7, 8, 14) -->
+        <p>
+            <label for="nama">Nama Lengkap:</label><br>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+        </p>
+
+        <p>
+            <label for="nim">NIM:</label><br>
+            <input type="text" id="nim" name="nim" placeholder="Masukkan NIM" required>
+        </p>
+
+        <p>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="nama@email.com" required>
+        </p>
+
+        <p>
+            <label for="password">Kata Sandi (Password):</label><br>
+            <input type="password" id="password" name="password" placeholder="Masukkan password" required>
+        </p>
+
+        <!-- Input Tel, Number, Date (Praktik 9, 14) -->
+        <p>
+            <label for="telepon">Nomor Telepon:</label><br>
+            <input type="tel" id="telepon" name="telepon" placeholder="081234567890" required>
+        </p>
+
+        <p>
+            <label for="umur">Umur (Tahun):</label><br>
+            <input type="number" id="umur" name="umur" min="15" max="60" value="18">
+        </p>
+
+        <p>
+            <label for="tgl_lahir">Tanggal Lahir:</label><br>
+            <input type="date" id="tgl_lahir" name="tgl_lahir" required>
+        </p>
+
+        <!-- Radio Button (Praktik 10) -->
+        <p>
+            <label>Jenis Kelamin:</label><br>
+            <input type="radio" id="jk_l" name="jenis_kelamin" value="Laki-laki">
+            <label for="jk_l">Laki-laki</label>
+            
+            <input type="radio" id="jk_p" name="jenis_kelamin" value="Perempuan" checked>
+            <label for="jk_p">Perempuan</label>
+        </p>
+
+        <!-- Select & Option (Praktik 12) -->
+        <p>
+            <label for="prodi">Program Studi Pilihan:</label><br>
+            <select id="prodi" name="prodi">
+                <option value="rpl" selected>Rekayasa Perangkat Lunak</option>
+                <option value="bd">Bisnis Digital</option>
+                <option value="si">Sistem Informasi</option>
+                <option value="ti">Teknik Informatika</option>
+                <option value="sk">Sistem Komputer</option>
+            </select>
+        </p>
+
+        <!-- Checkbox (Praktik 11) -->
+        <p>
+            <label>Minat dan Hobi (Boleh pilih lebih dari satu):</label><br>
+            <input type="checkbox" id="minat1" name="minat" value="Coding">
+            <label for="minat1">Coding / Pemrograman</label><br>
+
+            <input type="checkbox" id="minat2" name="minat" value="Desain">
+            <label for="minat2">Desain Grafis</label><br>
+
+            <input type="checkbox" id="minat3" name="minat" value="Musik">
+            <label for="minat3">Mendengarkan Musik</label><br>
+
+            <input type="checkbox" id="minat4" name="minat" value="Olahraga">
+            <label for="minat4">Olahraga</label><br>
+
+            <input type="checkbox" id="minat5" name="minat" value="Membaca">
+            <label for="minat5">Membaca Buku</label>
+        </p>
+
+        <!-- Textarea (Praktik 13) -->
+        <p>
+            <label for="alamat">Alamat Lengkap:</label><br>
+            <textarea id="alamat" name="alamat" rows="4" cols="40" placeholder="Masukkan alamat rumah lengkap" required></textarea>
+        </p>
+
+        <p>
+            <label for="alasan">Alasan Memilih Program Studi:</label><br>
+            <textarea id="alasan" name="alasan" rows="4" cols="40" placeholder="Tuliskan alasan Anda memilih prodi ini..."></textarea>
+        </p>
+
+        <!-- Button Types (Praktik 15) -->
+        <p>
+            <button type="submit">Kirim Pendaftaran</button>
+            <button type="reset">Reset Form</button>
+            <button type="button" onclick="alert('Ini adalah contoh button biasa!')">Tombol Bantuan</button>
+        </p>
+
+    </form>
+
+    <br>
+    <hr>
+    <p>
+        <a href="index.html">Kembali ke Beranda</a>
+    </p>
+
+</body>
+</html>

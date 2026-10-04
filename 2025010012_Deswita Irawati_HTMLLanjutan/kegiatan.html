@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Latihan HTML Lanjutan - Pendaftaran Kegiatan</title>
+</head>
+<body>
+
+    <!-- Structure Semantic HTML -->
+    <header>
+        <h1>Pendaftaran Kegiatan Workshop Web Design</h1>
+        <p>Politeknik Balekambang Jepara - Program Studi Rekayasa Perangkat Lunak</p>
+        <hr>
+    </header>
+
+    <nav>
+        <a href="index.html">Beranda</a> | 
+        <a href="list.html">Daftar (List)</a> | 
+        <a href="table.html">Tabel (Table)</a> | 
+        <a href="form.html">Formulir (Form)</a> | 
+        <a href="semantic.html">Semantic</a> | 
+        <a href="kegiatan.html">Kegiatan</a>
+        <hr>
+    </nav>
+
+    <main>
+        <!-- 1. INTEGRASI LIST: Ketentuan & Fasilitas -->
+        <section>
+            <h2>Informasi Kegiatan</h2>
+            
+            <h3>Ketentuan Peserta:</h3>
+            <ul>
+                <li>Mahasiswa aktif Politeknik Balekambang Jepara.</li>
+                <li>Membawa laptop pribadi yang sudah terinstall VS Code.</li>
+                <li>Mengikuti seluruh rangkaian acara hingga selesai.</li>
+                <li>Hadir tepat waktu 15 menit sebelum acara dimulai.</li>
+            </ul>
+
+            <h3>Fasilitas yang Didapat:</h3>
+            <ol>
+                <li>E-Sertifikat Praktikum Pemrograman Web</li>
+                <li>Modul Pembelajaran Lengkap</li>
+                <li>Snack dan Makan Siang</li>
+                <li>Relasi & Pengalaman Coding Bersama</li>
+            </ol>
+        </section>
+        <hr>
+
+        <!-- 2. INTEGRASI TABLE: Jadwal Acara (Minimal 5 Baris) -->
+        <section>
+            <h2>Jadwal Rangkaian Acara</h2>
+            <table border="1">
+                <tr>
+                    <th>Waktu</th>
+                    <th>Agenda / Sesi</th>
+                    <th>Pemateri</th>
+                    <th>Ruangan</th>
+                </tr>
+                <tr>
+                    <td>08.00 - 08.30</td>
+                    <td>Registrasi & Pembukaan</td>
+                    <td>Panitia Praktikum</td>
+                    <td>Aula Utama</td>
+                </tr>
+                <tr>
+                    <td>08.30 - 10.00</td>
+                    <td>Materi List & Table HTML</td>
+                    <td>Dosen RPL</td>
+                    <td>Lab RPL</td>
+                </tr>
+                <tr>
+                    <td>10.00 - 12.00</td>
+                    <td>Materi Form & Semantic HTML</td>
+                    <td>Instruktur Pemrograman</td>
+                    <td>Lab RPL</td>
+                </tr>
+                <tr>
+                    <td>12.00 - 13.00</td>
+                    <td>Istirahat, Sholat, & Makan Siang</td>
+                    <td>Seluruh Peserta</td>
+                    <td>Area Istirahat</td>
+                </tr>
+                <tr>
+                    <td>13.00 - 15.00</td>
+                    <td>Mini Project & Evaluasi Kode</td>
+                    <td>Tim Pengajar</td>
+                    <td>Lab RPL</td>
+                </tr>
+            </table>
+        </section>
+        <hr>
+
+        <!-- 3. INTEGRASI FORM: Form Pendaftaran (Minimal 6 Komponen Input) -->
+        <section>
+            <h2>Formulir Pendaftaran Peserta</h2>
+            <form action="" method="post">
+                
+                <!-- Input Text -->
+                <p>
+                    <label for="nama_lengkap">Nama Lengkap:</label><br>
+                    <input type="text" id="nama_lengkap" name="nama_lengkap" placeholder="Masukkan nama lengkap" required>
+                </p>
+
+                <!-- Input Email -->
+                <p>
+                    <label for="email_peserta">Email Aktif:</label><br>
+                    <input type="email" id="email_peserta" name="email_peserta" placeholder="nama@email.com" required>
+                </p>
+
+                <!-- Input Tel -->
+                <p>
+                    <label for="telp">Nomor WhatsApp/HP:</label><br>
+                    <input type="tel" id="telp" name="telp" placeholder="081234567890" required>
+                </p>
+
+                <!-- Select & Option -->
+                <p>
+                    <label for="kategori_peserta">Kategori Peserta:</label><br>
+                    <select id="kategori_peserta" name="kategori_peserta">
+                        <option value="mahasiswa_rpl" selected>Mahasiswa RPL</option>
+                        <option value="mahasiswa_non_rpl">Mahasiswa Non-RPL</option>
+                        <option value="alumni">Alumni / Umum</option>
+                    </select>
+                </p>
+
+                <!-- Radio Button -->
+                <p>
+                    <label>Pilihan Sesi Sesuai Jadwal:</label><br>
+                    <input type="radio" id="sesi_pagi" name="sesi" value="Pagi" checked>
+                    <label for="sesi_pagi">Sesi Pagi (08.00 - 12.00)</label><br>
+                    <input type="radio" id="sesi_full" name="sesi" value="Full Day">
+                    <label for="sesi_full">Sesi Penuh (08.00 - 15.00)</label>
+                </p>
+
+                <!-- Checkbox -->
+                <p>
+                    <label>Pilihan Menu Makan Siang:</label><br>
+                    <input type="checkbox" id="makanan1" name="makanan" value="Reguler" checked>
+                    <label for="makanan1">Menu Reguler (Ayam/Daging)</label><br>
+                    <input type="checkbox" id="makanan2" name="makanan" value="Vegetarian">
+                    <label for="makanan2">Menu Vegetarian / Sayur</label>
+                </p>
+
+                <!-- Textarea -->
+                <p>
+                    <label for="motivasi">Motivasi/Alasan Mengikuti Kegiatan:</label><br>
+                    <textarea id="motivasi" name="motivasi" rows="4" cols="40" placeholder="Tuliskan harapan atau alasan Anda..."></textarea>
+                </p>
+
+                <!-- Buttons -->
+                <p>
+                    <button type="submit">Kirim Pendaftaran</button>
+                    <button type="reset">Reset Form</button>
+                </p>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p>&copy; 2026 Deswita Irawati - 2025010012. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
